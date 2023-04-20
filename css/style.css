@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #ddd2ca;
+}
+
+#contenedor{
+  width: 960px;
+  margin: 0 auto;
+  background-color: #ddd2ca;
+  font-family: Roboto;
+}
+
+header{
+  width:960px;
+  height: 75px;
+  background-color: #ddd2ca;
+  position: fixed;
+  z-index: 1001;
+}
+
+header h1{
+  width:125px;
+  height:70px;
+  position: relative;
+  float:left;
+  background-image: url(../img/logo-Cuarto-Menguante.png);
+  background-repeat: no-repeat;
+  background-size: 125px 70px;
+  text-indent: -1999px;
+  overflow: hidden;
+}
+
+nav{
+  width: 600px;
+  height: 65px;
+  padding: 10px;
+  top: 0;
+  float:right;
+  background-color: #ddd2ca;
+}
+
+#menu {
+  width: auto;
+  margin: 0 auto;
+  float: right;
+  background-color: #ddd2ca;
+}
+#menu li {
+  list-style-type: none;
+  width: 100px;
+  background-color: #ef0084;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  display: inline-block;
+}
+#menu li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-family: Tahoma;
+}
+#menu li a:hover {
+  color: black;
+  background-color: #fab2da;
+  border-radius: 10px;
+}
+
+
+main{
+  margin-bottom: 5px;
+}
+
+
+/* ----------------- */
+/* Secciones         */
+/* ----------------- */
+section{
+  padding: 10px;
+}
+
+section h2{
+  font-size: 35px;
+  font-weight: 500;
+  font-family: WindSong;
+  background-color: #ff9f00;
+  padding: 5px 5px 1px 20px;
+}
+
+/* -------------------------------------- */
+/* Guarda separador de section            */
+/* -------------------------------------- */
+.guarda-separador{
+  clear:left;
+  height: 100px;
+  background-image: url(../img/guarda.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: center;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------- */
+/* Slideshow - Diapositivas FOTOS  w3school */
+/* ---------------------------------------- */
+#inicio{
+  padding-top: 1px;
+}
+#inicio h2{
+  background-color:transparent;
+  text-align: center;
+  padding: 1px;
+}
+
+.pasafoto{margin-top: 90px;}
+.mySlides {display: none; z-index: 1;}
+.mySlides img {width:100%; vertical-align: middle;}
+
+/* Slideshow - Diapositivas contenedor */
+.slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.slideshow-container_h2{
+  background-color: rgba(133, 130, 130, 0.4)!important;
+  color:white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.slideshow-container_h2 h2{
+  font-size: 45px;
+  line-height: 1.6;
+}
+
+/* Los puntos/viñetas/indicadores */
+.dot_photo{
+  text-align:center;
+  margin-bottom: 20px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Animación que se desvanece */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* En pantallas más pequeñas, reduzca el tamaño del texto */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* -------------------------------------- */
+/* seccion NOSOTROS                       */
+/* -------------------------------------- */
+#nosotros{
+  padding-top: 80px;
+}
+
+.nosotros figure{display: inline-block;}
+.nosotros figure img{vertical-align: middle; margin-top: .5em;}
+
+.nosotros_texto{
+  margin: 10px 20px 0px 0px;
+  padding: 10px;
+  width: 60%;
+  float:left;
+}
+
+.nosotros_texto p{
+  padding-top: 10px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.nosotros_texto ul{
+  margin-left: 30px;
+  list-style-type: circle;
+}
+.nosotros_texto ul li{
+  line-height: 1.8;
+font-style: italic;
+}
+
+.nosotros_foto{
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* -------------------------------------- */
+/* seccion PRODUCTOS                      */
+/* -------------------------------------- */
+#productos{
+  padding-top: 80px;
+}
+
+#productos p{
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#productos_detalle_renglon1, #productos_detalle_renglon2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#productos_detalle_renglon1, #productos_detalle_renglon2, figure{
+  display: inline-block;
+  margin:10px;
+}
+#productos_detalle_renglon1, #productos_detalle_renglon2, figure img{vertical-align: top;}
+#productos_detalle_renglon1, #productos_detalle_renglon2, figure figcaption{
+  text-align: center;
+  padding-top: 10px;
+  font-size:14px;
+  font-weight: bold;
+}
+
+
+/* -------------------------------------- */
+/* seccion SERVICIOS                      */
+/* -------------------------------------- */
+#servicios{
+  padding-top: 80px;
+}
+
+#servicios p{
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#servicios_detalle {display: flex; justify-content: center; align-items: center;}
+#servicios_detalle figure{display: inline-block; margin:5px;}
+#servicios_detalle figure img{vertical-align: top;}
+#servicios_detalle figure figcaption{text-align: center;padding-top: 10px; font-size:14px; font-weight: bold;}
+
+
+/* ------------------------------------------------------------- */
+/* seccion CONTACTO                                              */
+/* https://www.w3schools.com/howto/howto_css_contact_section.asp */
+/* ------------------------------------------------------------- */
+#contacto{
+  margin-top: 20px;
+  padding-top: 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #ef0084;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+.column img{height: 500px;}
+.column textarea {height:170px;}
+
+.row{
+  margin-top: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+/* -------------------------------------- */
+/* Pie de página                          */
+/* -------------------------------------- */
+footer{
+  background-color: #c6bdb5;
+  padding: 10px;
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+}
+#redes_sociales {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#redes_sociales li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 10px;
+}
+#redes_sociales li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #5a5a5a;
+}
+#redes_sociales li a img{width: 25px;}
+
+#redes_sociales li a:hover {
+  color: black;
+  border-radius: 10px;
+}
+
+#pie_sitio {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#pie_sitio li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 10px;
+  color: #5a5a5a;
+}
+
+#pie_catedra {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#pie_catedra li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 10px;
+  color: #5a5a5a;
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuarto Menguante</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icono-pestaña.ico">
+</head>
+
+<body>
+<div id="contenedor">
+
+    <header>
+        <h1>Cuarto Menguante</h1>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#contenedor">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="inicio">
+
+            <div class="pasafoto">
+
+                <div class="slideshow-container">
+                    <div class="slideshow-container_h2">
+                        <h2>Bienvenidos a nuestra panadería</h2>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="img/slides_0.jpg" alt="foto slides 1">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/slides_1.jpg" alt="foto slides 3">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <img src="img/slides_2.jpg" alt="foto slides 2">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="img/slides_3.jpg" alt="foto slides 4">
+                    </div>
+
+                </div>
+
+                <div class="dot_photo">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Cambia imagen cada 2 segundos
+            }
+            </script>
+
+            <div class="guarda-separador"></div>
+
+        </section>
+
+
+        <section id="nosotros">
+        <h2>Acerca de nosotros</h2>
+
+            <div class="nosotros_texto">
+                <p>
+                    Desde muy chico siento una pasión inigualable por la cocina, no solo me gusta cocinar, sino que intento transmitir emociones a través de mis preparaciones y disfruto mucho cuando veo que esos sentimientos llegan a la gente.
+                    En octubre del 2020, en medio de la pandemia, y con todos los pronósticos en contra, decidí sembrar una semillita de ilusión, con muchos miedos e incertidumbre, abri una pagina en instagram, con un sueño muy claro : Tener mi emprendimiento para comercializar productos de panadería.
+
+                <br>
+                     Con el apoyo de mi grupo familiar, esa semillita no solo comenzó a echar raíces sino que ya despuntaban sus primeras hojitas, donde el sueño dejó de serlo para volverse realidad.
+                     En la actualidad, se elaboran medialunas, pizzas, tortilla, pan y demás productos de panadería. Fusionando una cocina tradicional con una cocina moderna, para lograr obtener un producto único y artesanal el cual es terminado en un horno de barro. Manteniendo siempre la misma misión,que desde el principio fue brindar lo mejor  y que lo mejor esté al alcance de las personas. 
+               
+                <br>
+                Nuestro atributos:
+                </p>
+                <ul>
+                        <li>Calidez, dedicación y tiempo en la atención de cada cliente.</li>
+                        <li>Estilo y calidad únicos.</li>
+                        <li>Exigente selección de materias primas.</li>
+                        <li>Una imagen tradicional, moderna y cálida.</li>
+                        <li>Actualización y capacitación permanente.</li>
+                    </ul>
+            </div>
+            <div class="nosotros_foto">
+                <figure>
+                    <img src="img/dulzura-en-los-detalles.jpg" alt="La dulzura en los detalles">
+                </figure>
+            </div>
+
+            <div class="guarda-separador"></div>
+
+        </section>
+
+
+        <section id="productos">
+        <h2>Productos</h2>
+            <p>
+                Nos encontramos en Florencio Varela. Podés pasar a buscar todos nuestros productos: desayunos, almuerzos, meriendas, cenas y pasteleria.
+            </p>
+
+            <div id="productos_detalle_renglon1">
+                <figure>
+                    <img src="img/productos-medialunas.jpg" alt="Medialunas">
+                    <figcaption>Medialunas</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/productos-alfajorcitos-maicena.jpg" alt="Alfajorcitos de maicena">
+                    <figcaption>Alforcitos de maicena</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/producto-bizcochos.jpg" alt="Bizcochos">
+                    <figcaption>Bizcochos</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/producto-cremona.jpg" alt="Cremonas">
+                    <figcaption>Cremonas</figcaption>
+                </figure>
+            </div>
+
+            <div id="productos_detalle_renglon2">
+                <figure>
+                    <img src="img/productos-chipa.jpg" alt="Chipá">
+                    <figcaption>Chipá</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/productos-tortas.jpg" alt="Tortas">
+                    <figcaption>Tortas</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/productos-prepizzas.jpg" alt="Prepizas">
+                    <figcaption>Prepizas</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/productos-tortillas.jpg" alt="Tortillas">
+                    <figcaption>Tortillas</figcaption>
+                </figure>
+                
+            </div>
+
+            <div class="guarda-separador"></div>
+
+        </section>
+
+
+        <section id="servicios">
+        <h2>Servicios</h2>
+            <p>
+                Contamos con un centro de elaboración en Florencio Varela donde se mantienen los mismos pilares desde nuestro inicio: la exigente selección de materias primas y la perfecta combinación de la cocina tradicional con una cocina moderna (en la cual nos capacitamos día a día). 
+                En la actualidad, desarrollamos, elaboramos y comercializamos productos de pastelería, panificados y más. 
+
+            </p>
+
+            <div id="servicios_detalle">
+                <figure>
+                    <img src="img/servicios-caja-celebracion.jpg" alt="Caja de celebraciones">
+                    <figcaption>Caja de celebraciones</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/servicios-eventos.jpg" alt="Servicios para Eventos">
+                    <figcaption>Eventos</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/servicios-por-mayor.jpg" alt="Ventas por Mayor">
+                    <figcaption>Ventas por Mayor</figcaption>
+                </figure>
+            </div>
+
+            <div class="guarda-separador"></div>
+
+        </section>
+
+
+        <section id="contacto">
+        <h2>Contacto</h2>
+
+            <div class="row">
+
+                <div class="column">
+                    <!-- <img src="img/map.jpg" alt="foto mapa de muestra"> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.125378950642!2d-58.25172122568982!3d-34.80278737288354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32916d57fb54b%3A0x5eb16d6c18b049c3!2sCa%C3%B1uelas%201973%2C%20B1888%20HSI%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681518060513!5m2!1ses!2sar" width="400px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="column">
+                    <form action="mailto:suarezfabian@hotmail.com" method="post" enctype="text/plain">
+                        <label for="fname">Nombre</label>
+                        <input type="text" id="fname" name="nombre" placeholder="Su nombre...">
+                        <label for="lname">Apellido</label>
+                        <input type="text" id="lname" name="apellido" placeholder="Su apellido...">
+                        <label for="country">Barrio</label>
+                        <select id="country" name="barrio">
+                            <option value="" disabled selected>Seleccione barrio</option>
+                            <option value="Barrio Centro">Barrio Centro</option>
+                            <option value="Santa Rosa">Santa Rosa</option>
+                            <option value="Santo Tomas">Santo Tomas</option>
+                            <option value="Villa del Plata">Villa del Plata</option>
+                            <option value="Villa Aurora">Villa Aurora</option>
+                            <option value="Zeballos">Zeballos</option>
+                        </select>
+                        <label for="subject">Mensaje</label>
+                        <textarea id="subject" name="subject" placeholder="escriba aqui su mensaje..."></textarea>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <ul id="redes_sociales">
+            <li>
+                <!-- <a href="https://facebook.com" target="_blank" title="facebook">
+                    <img src="img/logo_facebook.png" alt="Facebook">
+                </a>
+            </li> -->
+            <li>
+                <a href="https://instagram.com/cuarto_menguanteok?igshid=ZDdkNTZiNTM=" target="_blank" title="instagram">
+                    <img src="img/logo_instagram.png" alt="Instagram" >
+                </a>
+            </li>
+            <!-- <li>
+                <a href="https://twitter.com" target="_blank" title="twitter">
+                    <img src="img/logo_twitter.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://tiktok.com" target="_blank" title="tiktok">
+                    <img src="img/logo_tik-tok.png" alt="Tik-Tok">
+                </a>
+            </li>
+            <li>
+                <a href="https://youtube.com" target="_blank" title="youtube">
+                    <img src="img/logo_youtube.png" alt="Youtube">
+                </a>
+            </li> -->
+        </ul>
+        <ul id="pie_sitio">
+            <li>Sitio realizado por :</li>
+            <li>Fabian Suarez,</li>
+            <li>Claudio Guzman,</li>
+            <li>Pablo Patroncini</li>
+        </ul>
+        <ul id="pie_catedra">
+            <li>Codo a Codo/ Full Stack PYTHON</li>
+        </ul>
+    </footer>
+
+</div>
+
+</body>
+</html>
