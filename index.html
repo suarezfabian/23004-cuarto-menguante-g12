@@ -210,11 +210,11 @@
                 </div>
 
                 <div class="column">
-                    <form action="mailto:suarezfabian@hotmail.com" method="post" enctype="text/plain">
+                    <form id= "contact-form" action="#" method="post" enctype="text/plain">
                         <label for="fname">Nombre</label>
                         <input type="text" id="fname" name="nombre" placeholder="Su nombre...">
-                        <label for="lname">Apellido</label>
-                        <input type="text" id="lname" name="apellido" placeholder="Su apellido...">
+                        <label for="number">Celular</label>
+                        <input type="text" id="number" name="numero" placeholder="Su numero de celular...">
                         <label for="country">Barrio</label>
                         <select id="country" name="barrio">
                             <option value="" disabled selected>Seleccione barrio</option>
@@ -226,9 +226,10 @@
                             <option value="Zeballos">Zeballos</option>
                         </select>
                         <label for="subject">Mensaje</label>
-                        <textarea id="subject" name="subject" placeholder="escriba aqui su mensaje..."></textarea>
+                        <textarea id="message" name="mensaje" placeholder="Escriba aqui su mensaje..."></textarea>
                         <input type="submit" value="Enviar">
                     </form>
+                    <script src="script.js"></script>
                 </div>
 
             </div>
