@@ -205,19 +205,20 @@
             <div class="row">
 
                 <div class="column">
-                    <!-- <img src="img/map.jpg" alt="foto mapa de muestra"> -->
+                    <!-- Enlace del mapa de google"> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.125378950642!2d-58.25172122568982!3d-34.80278737288354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32916d57fb54b%3A0x5eb16d6c18b049c3!2sCa%C3%B1uelas%201973%2C%20B1888%20HSI%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681518060513!5m2!1ses!2sar" width="400px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="column">
-                    <form id= "contact-form" action="#" method="post" enctype="text/plain">
-                        <label for="fname">Nombre completo:</label>
-                        <input type="text" id="fname" name="nombre" placeholder="Su nombre...">
+                    <form id= "contact-form" action="https://formspree.io/f/mayzvgqz" method="POST">
+                        <label for="name">Nombre completo:</label>
+                        <input type="text" id="fname" name="Nombre Completo:" placeholder="Su nombre...">
                         <label for="number">Numero de celular:</label>
-                        <input type="text" id="number" name="numero" placeholder="Su numero de celular...">
+                        <input type="text" id="number" name="Numero de celular:" placeholder="Su numero de celular...">
                         <label for="country">Elija el barrio</label>
-                        <select id="country" name="barrio">
-                            <option value="" disabled selected>Seleccione barrio</option>
+                        <select id="country" name="Barrio" >
+                            <option value="" disabled selected>Seleccione el barrio...</option>
+                            <option value="Sin definir">Sin definir</option>
                             <option value="Barrio Centro">Barrio Centro</option>
                             <option value="Santa Rosa">Santa Rosa</option>
                             <option value="Santo Tomas">Santo Tomas</option>
@@ -226,7 +227,7 @@
                             <option value="Zeballos">Zeballos</option>
                         </select>
                         <label for="subject">Mensaje</label>
-                        <textarea id="message" name="mensaje" placeholder="Escriba aqui su mensaje..."></textarea>
+                        <textarea id="message" name="Mensaje" placeholder="Escriba aqui su mensaje..."></textarea>
                         <input type="submit" value="Enviar">
                     </form>
                     <script src="script.js"></script>
