@@ -113,6 +113,7 @@
 
 
         <section id="productos">
+
             <h2>Productos</h2>
             <p>Nos encontramos en <strong>Florencio Varela</strong>, podés pasar a buscar todos nuestros productos: <strong>desayunos, almuerzos, meriendas, cenas y pastelería</strong>.</p>
 
@@ -135,6 +136,7 @@
                         <figcaption>Cremonas</figcaption>
                     </figure>
                 </div>
+
 
                 <div id="productos_detalle_renglon2">
                     <figure>
@@ -160,8 +162,11 @@
 
 
         <section id="servicios">
+
+       
             <h2>Servicios</h2>
             <p>Contamos con un centro de elaboración en <strong>Florencio Varela</strong> donde se mantienen los mismos pilares desde nuestro inicio: la exigente selección de materias primas y la perfecta combinación de la cocina tradicional con una cocina moderna (en la cual nos capacitamos día a día). En la actualidad, desarrollamos, elaboramos y comercializamos productos de <strong>pastelería, panificados y más</strong>.</p>
+
 
             <div id="servicios_detalle">
                 <figure>
@@ -187,38 +192,35 @@
 
             <div class="row">
 
-                <div class="column_mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.125378950642!2d-58.25172122568982!3d-34.80278737288354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32916d57fb54b%3A0x5eb16d6c18b049c3!2sCa%C3%B1uelas%201973%2C%20B1888%20HSI%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681518060513!5m2!1ses!2sar" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="column">
+                    <!-- Enlace del mapa de google"> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.125378950642!2d-58.25172122568982!3d-34.80278737288354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32916d57fb54b%3A0x5eb16d6c18b049c3!2sCa%C3%B1uelas%201973%2C%20B1888%20HSI%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1681518060513!5m2!1ses!2sar" width="400px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
-                <div class="column_formulario">
-                    <form action="mailto:suarezfabian@hotmail.com" method="post" enctype="text/plain">
-                        <div>
-                            <label for="fname">Nombre: </label>
-                            <input type="text" id="fname" name="nombre" placeholder="Su nombre...">
-                        </div>
-                        <div>
-                            <label for="lname">Apellido: </label>
-                            <input type="text" id="lname" name="apellido" placeholder="Su apellido...">
-                        </div>
-                        <div>
-                            <label for="country">Barrio: </label>
-                            <select id="country" name="barrio">
-                                <option value="" disabled selected>Seleccione barrio</option>
-                                <option value="Barrio Centro">Barrio Centro</option>
-                                <option value="Santa Rosa">Santa Rosa</option>
-                                <option value="Santo Tomas">Santo Tomas</option>
-                                <option value="Villa del Plata">Villa del Plata</option>
-                                <option value="Villa Aurora">Villa Aurora</option>
-                                <option value="Zeballos">Zeballos</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="subject">Mensaje: </label>
-                            <textarea id="subject" name="subject" placeholder="escriba aqui su mensaje..."></textarea>
-                        </div>
-                            <input type="submit" value="Enviar">
+                <div class="column">
+                    <form id= "contact-form" action="https://formspree.io/f/mayzvgqz" method="POST">
+                        <label for="name">Nombre completo:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Su nombre...">
+                        <label for="number">Numero de celular:</label>
+                        <input type="text" id="number" name="number" placeholder="Su numero de celular...">
+                        <label for="country">Elija el barrio</label>
+                        <select id="country" name="country" >
+                            <option value="" disabled selected>Seleccione el barrio...</option>
+                            <option value="Sin definir">Sin definir</option>
+                            <option value="Barrio Centro">Barrio Centro</option>
+                            <option value="Santa Rosa">Santa Rosa</option>
+                            <option value="Santo Tomas">Santo Tomas</option>
+                            <option value="Villa del Plata">Villa del Plata</option>
+                            <option value="Villa Aurora">Villa Aurora</option>
+                            <option value="Zeballos">Zeballos</option>
+                        </select>
+                        <label for="subject">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="Escriba aqui su mensaje..."></textarea>
+                        <input type="submit" value="Enviar">
+
                     </form>
+                    <script src="script.js"></script>
                 </div>
 
             </div>
