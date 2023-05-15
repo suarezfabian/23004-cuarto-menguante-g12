@@ -2,20 +2,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cuarto Menguante</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/icono-pestaña.ico">
-</head>
 
+    <!-- para logo instagram -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Cuarto Menguante</title>
+
+</head>
 <body>
 <div id="contenedor">
 
     <header>
-        <h1>Cuarto Menguante</h1>
-
+        <!-- h1>Cuarto Menguante</h1 -->
         <nav>
-            <ul id="menu">
-                <li><a href="#contenedor">Inicio</a></li>
+            <input type="checkbox" name="" id="nav_checkbox" class="nav_checkbox" />
+            <label for="nav_checkbox" class="nav_toggle">
+                <!-- Menu -->
+                <svg class="menu" viewBox="0 0 448 512" height="40" width="40" title="bars">
+                    <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+                </svg>
+
+                <!-- Close -->
+                <svg class="close" viewBox="0 0 384 512" width="100" title="times">
+                    <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+                </svg>
+            </label>
+
+            <ul class="menu">
+                <li class="menu_logo">
+                    <img src="img/logo-Cuarto-Menguante.png" alt="">
+                </li>
+                <li><a class="active" href="#contenedor">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -24,17 +43,15 @@
         </nav>
     </header>
 
-
     <main>
         <section id="inicio">
-
             <div class="pasafoto">
 
                 <div class="slideshow-container">
                     <div class="slideshow-container_h2">
                         <h2>Bienvenidos a nuestra panadería</h2>
                     </div>
-                    
+
                     <div class="mySlides fade">
                         <img src="img/slides_0.jpg" alt="foto slides 1">
                     </div>
@@ -42,7 +59,7 @@
                     <div class="mySlides fade">
                         <img src="img/slides_1.jpg" alt="foto slides 3">
                     </div>
-                    
+
                     <div class="mySlides fade">
                         <img src="img/slides_2.jpg" alt="foto slides 2">
                     </div>
@@ -50,7 +67,6 @@
                     <div class="mySlides fade">
                         <img src="img/slides_3.jpg" alt="foto slides 4">
                     </div>
-
                 </div>
 
                 <div class="dot_photo">
@@ -59,36 +75,13 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
+
             </div>
-            <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}
-                for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 2000); // Cambia imagen cada 2 segundos
-            }
-            </script>
-
             <div class="guarda-separador"></div>
-
         </section>
 
-
         <section id="nosotros">
-        <h2>Acerca de nosotros</h2>
+            <h2>Acerca de nosotros</h2>
 
             <div class="nosotros_texto">
                 <p>
@@ -96,9 +89,9 @@
                     En octubre del 2020, en medio de la pandemia, y con todos los pronósticos en contra, decidí sembrar una semillita de ilusión, con muchos miedos e incertidumbre, abri una pagina en instagram, con un sueño muy claro : Tener mi emprendimiento para comercializar productos de panadería.
 
                 <br>
-                     Con el apoyo de mi grupo familiar, esa semillita no solo comenzó a echar raíces sino que ya despuntaban sus primeras hojitas, donde el sueño dejó de serlo para volverse realidad.
-                     En la actualidad, se elaboran medialunas, pizzas, tortilla, pan y demás productos de panadería. Fusionando una cocina tradicional con una cocina moderna, para lograr obtener un producto único y artesanal el cual es terminado en un horno de barro. Manteniendo siempre la misma misión,que desde el principio fue brindar lo mejor  y que lo mejor esté al alcance de las personas. 
-               
+                    Con el apoyo de mi grupo familiar, esa semillita no solo comenzó a echar raíces sino que ya despuntaban sus primeras hojitas, donde el sueño dejó de serlo para volverse realidad.
+                    En la actualidad, se elaboran medialunas, pizzas, tortilla, pan y demás productos de panadería. Fusionando una cocina tradicional con una cocina moderna, para lograr obtener un producto único y artesanal el cual es terminado en un horno de barro. Manteniendo siempre la misma misión,que desde el principio fue brindar lo mejor  y que lo mejor esté al alcance de las personas. 
+
                 <br>
                 Nuestro atributos:
                 </p>
@@ -115,69 +108,65 @@
                     <img src="img/dulzura-en-los-detalles.jpg" alt="La dulzura en los detalles">
                 </figure>
             </div>
-
             <div class="guarda-separador"></div>
-
         </section>
 
 
         <section id="productos">
-        <h2>Productos</h2>
-            <p>
-                Nos encontramos en Florencio Varela. Podés pasar a buscar todos nuestros productos o coordinar un punto de encuentro: desayunos, almuerzos, meriendas, cenas y pasteleria.
-            </p>
 
-            <div id="productos_detalle_renglon1">
-                <figure>
-                    <img src="img/productos-medialunas.jpg" alt="Medialunas">
-                    <figcaption>Medialunas</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/productos-alfajorcitos-maicena.jpg" alt="Alfajorcitos de maicena">
-                    <figcaption>Alforcitos de maicena</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/producto-bizcochos.jpg" alt="Bizcochos">
-                    <figcaption>Bizcochos</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/producto-cremona.jpg" alt="Cremonas">
-                    <figcaption>Cremonas</figcaption>
-                </figure>
+            <h2>Productos</h2>
+            <p>Nos encontramos en <strong>Florencio Varela</strong>, podés pasar a buscar todos nuestros productos: <strong>desayunos, almuerzos, meriendas, cenas y pastelería</strong>.</p>
+
+            <div class="fotos_productos">
+                <div id="productos_detalle_renglon1">
+                    <figure>
+                        <img src="img/productos-medialunas.jpg" alt="Medialunas">
+                        <figcaption>Medialunas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/productos-alfajorcitos-maicena.jpg" alt="Alfajorcitos de maicena">
+                        <figcaption>Alforcitos de maicena</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/producto-bizcochos.jpg" alt="Bizcochos">
+                        <figcaption>Bizcochos</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/producto-cremona.jpg" alt="Cremonas">
+                        <figcaption>Cremonas</figcaption>
+                    </figure>
+                </div>
+
+
+                <div id="productos_detalle_renglon2">
+                    <figure>
+                        <img src="img/productos-chipa.jpg" alt="Chipá">
+                        <figcaption>Chipá</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/productos-tortas.jpg" alt="Tortas">
+                        <figcaption>Tortas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/productos-prepizzas.jpg" alt="Prepizas">
+                        <figcaption>Prepizas</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/productos-tortillas.jpg" alt="Tortillas">
+                        <figcaption>Tortillas</figcaption>
+                    </figure>
+                </div>
             </div>
-
-            <div id="productos_detalle_renglon2">
-                <figure>
-                    <img src="img/productos-chipa.jpg" alt="Chipá">
-                    <figcaption>Chipá</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/productos-tortas.jpg" alt="Tortas">
-                    <figcaption>Tortas</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/productos-prepizzas.jpg" alt="Prepizas">
-                    <figcaption>Prepizas</figcaption>
-                </figure>
-                <figure>
-                    <img src="img/productos-tortillas.jpg" alt="Tortillas">
-                    <figcaption>Tortillas</figcaption>
-                </figure>
-                
-            </div>
-
             <div class="guarda-separador"></div>
-
         </section>
 
 
         <section id="servicios">
-        <h2>Servicios especiales</h2>
-            <p>
-                Contamos con un centro de elaboración en Florencio Varela donde se mantienen los mismos pilares desde nuestro inicio: la exigente selección de materias primas y la perfecta combinación de la cocina tradicional con una cocina moderna (en la cual nos capacitamos día a día). 
-                En la actualidad, desarrollamos, elaboramos y comercializamos productos de pastelería, panificados y más. 
 
-            </p>
+       
+            <h2>Servicios</h2>
+            <p>Contamos con un centro de elaboración en <strong>Florencio Varela</strong> donde se mantienen los mismos pilares desde nuestro inicio: la exigente selección de materias primas y la perfecta combinación de la cocina tradicional con una cocina moderna (en la cual nos capacitamos día a día). En la actualidad, desarrollamos, elaboramos y comercializamos productos de <strong>pastelería, panificados y más</strong>.</p>
+
 
             <div id="servicios_detalle">
                 <figure>
@@ -195,14 +184,14 @@
             </div>
 
             <div class="guarda-separador"></div>
-
         </section>
 
 
         <section id="contacto">
-        <h2>Contacto</h2>
+            <h2>Contacto</h2>
 
             <div class="row">
+
 
                 <div class="column">
                     <!-- Enlace del mapa de google"> -->
@@ -229,12 +218,12 @@
                         <label for="subject">Mensaje</label>
                         <textarea id="message" name="message" placeholder="Escriba aqui su mensaje..."></textarea>
                         <input type="submit" value="Enviar">
+
                     </form>
                     <script src="script.js"></script>
                 </div>
 
             </div>
-
         </section>
     </main>
 
@@ -242,34 +231,14 @@
     <footer>
         <ul id="redes_sociales">
             <li>
-                <!-- <a href="https://facebook.com" target="_blank" title="facebook">
-                    <img src="img/logo_facebook.png" alt="Facebook">
-                </a>
-            </li> -->
-            <li>
                 <a href="https://instagram.com/cuarto_menguanteok?igshid=ZDdkNTZiNTM=" target="_blank" title="instagram">
-                    <img src="img/logo_instagram.png" alt="Instagram" >
+                    <i class="fa fa-instagram"></i>
                 </a>
             </li>
-            <!-- <li>
-                <a href="https://twitter.com" target="_blank" title="twitter">
-                    <img src="img/logo_twitter.png" alt="Twitter">
-                </a>
-            </li>
-            <li>
-                <a href="https://tiktok.com" target="_blank" title="tiktok">
-                    <img src="img/logo_tik-tok.png" alt="Tik-Tok">
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com" target="_blank" title="youtube">
-                    <img src="img/logo_youtube.png" alt="Youtube">
-                </a>
-            </li> -->
         </ul>
         <ul id="pie_sitio">
             <li>Sitio realizado por :</li>
-            <li>Fabian Suarez,</li>
+            <li>Fabián Suárez,</li>
             <li>Claudio Guzman,</li>
             <li>Pablo Patroncini</li>
         </ul>
@@ -279,6 +248,44 @@
     </footer>
 
 </div>
+
+<!-- menu -->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+<!-- menu -->
+
+<!-- slide fotos -->
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Cambia imagen cada 2 segundos
+    }
+</script>
+<!-- slide fotos -->
+
 
 </body>
 </html>

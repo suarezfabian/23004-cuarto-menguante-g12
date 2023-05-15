@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
 
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+	--black: #000000;
 }
 
 body{
@@ -12,67 +16,131 @@ body{
 }
 
 #contenedor{
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   background-color: #ddd2ca;
   font-family: Roboto;
 }
 
 header{
-  width:960px;
-  height: 75px;
+  width:100%;
+  height: 90px;
   background-color: #ddd2ca;
   position: fixed;
   z-index: 1001;
 }
 
-header h1{
-  width:125px;
-  height:70px;
-  position: relative;
-  float:left;
-  background-image: url(../img/logo-Cuarto-Menguante.png);
-  background-repeat: no-repeat;
-  background-size: 125px 70px;
-  text-indent: -1999px;
-  overflow: hidden;
-}
-
 nav{
-  width: 600px;
   height: 65px;
   padding: 10px;
   top: 0;
-  float:right;
   background-color: #ddd2ca;
+	display: block;
 }
 
-#menu {
-  width: auto;
-  margin: 0 auto;
-  float: right;
-  background-color: #ddd2ca;
+.nav_toggle {
+	position: absolute;
+	cursor: pointer;
+	margin: 0 1rem;
+	right: 0;
 }
-#menu li {
-  list-style-type: none;
-  width: 100px;
+
+.nav_toggle svg {
+	width: 100px;
+	fill: var(--black);
+}
+
+.nav_toggle .close {
+	display: none;
+}
+
+.nav_toggle .close,
+.nav_toggle .menu {
+	margin-top: 0.3rem;
+}
+
+.nav_checkbox {
+	display: none;
+}
+
+.menu {
+  /*background-color: #ef0084;*/
+  display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	margin:2px;
+  padding: 5px;
+}
+
+.menu li {
   background-color: #ef0084;
-  margin-bottom: 5px;
+  width: 100px;
   border-radius: 10px;
-  display: inline-block;
+	list-style-type: none;
+	display: none;
+  /*display: inline-block;*/
 }
-#menu li a {
-  text-decoration: none;
+
+.menu li:first-child {
+  background-color: #ddd2ca;
+  margin-right: auto;
+	display: block;
+  height: 80px; /* impacta en los titulos de las secciones */
+}
+
+.menu a {
   display: block;
   text-align: center;
   padding: 10px;
   color: white;
-  font-family: Tahoma;
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.1rem;
 }
-#menu li a:hover {
+
+.menu a.active {
+  background-color: #ff73c0;
+  color: white;
+  border-radius: 10px;
+}
+
+.menu li a:hover {
   color: black;
   background-color: #fab2da;
   border-radius: 10px;
+}
+
+.menu_logo {
+	height: 30px;
+}
+
+.menu_logo img {
+	height: 100%;
+}
+
+#nav_checkbox:checked ~ ul.menu li {
+	display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .close {
+	display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .menu {
+	display: none;
+}
+
+@media only screen and (min-width: 750px) {
+	.nav_toggle {
+		display: none;
+	}
+	.menu {
+		flex-direction: row;
+	}
+	.menu li {
+		display: block;
+	}
 }
 
 
@@ -96,6 +164,7 @@ section h2{
   padding: 5px 5px 1px 20px;
 }
 
+
 /* -------------------------------------- */
 /* Guarda separador de section            */
 /* -------------------------------------- */
@@ -109,11 +178,12 @@ section h2{
   margin: 0 auto;
 }
 
+
 /* ---------------------------------------- */
 /* Slideshow - Diapositivas FOTOS  w3school */
 /* ---------------------------------------- */
 #inicio{
-  padding-top: 1px;
+  padding-top: 20px;
 }
 #inicio h2{
   background-color:transparent;
@@ -171,27 +241,29 @@ section h2{
   animation-duration: 1.5s;
 }
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 /* En pantallas más pequeñas, reduzca el tamaño del texto */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 650px) {
   .text {font-size: 11px}
 }
+
+
 
 /* -------------------------------------- */
 /* seccion NOSOTROS                       */
 /* -------------------------------------- */
 #nosotros{
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .nosotros figure{display: inline-block;}
 .nosotros figure img{vertical-align: middle; margin-top: .5em;}
 
 .nosotros_texto{
-  margin: 10px 20px 0px 0px;
+  margin: 10px 20px 0px 20px;
   padding: 10px;
   width: 60%;
   float:left;
@@ -213,22 +285,39 @@ font-style: italic;
 }
 
 .nosotros_foto{
+  text-align: center;
   margin-top: 20px;
   padding: 20px;
 }
+
+/* En pantallas más pequeñas, reduzca el tamaño del texto */
+@media only screen and (max-width: 750px) {
+  .nosotros_texto{
+    margin: 10px 20px 0px 20px;
+    padding: 10px;
+    width: auto;
+    float: left;
+  }
+}
+
 
 /* -------------------------------------- */
 /* seccion PRODUCTOS                      */
 /* -------------------------------------- */
 #productos{
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 #productos p{
   line-height: 1.8;
   text-align: justify;
-  margin-top: 20px;
   padding: 10px;
+  margin: 20px 20px 0px 20px;
+}
+
+.fotos_productos{
+  margin:0px auto;
+  text-align:center;
 }
 
 #productos_detalle_renglon1, #productos_detalle_renglon2 {
@@ -240,6 +329,7 @@ font-style: italic;
   display: inline-block;
   margin:10px;
 }
+
 #productos_detalle_renglon1, #productos_detalle_renglon2, figure img{vertical-align: top;}
 #productos_detalle_renglon1, #productos_detalle_renglon2, figure figcaption{
   text-align: center;
@@ -248,39 +338,81 @@ font-style: italic;
   font-weight: bold;
 }
 
+#productos_detalle_renglon1 figure:hover {color:rgb(246, 0, 160);}
+#productos_detalle_renglon1 figure img:hover {
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+}
 
+#productos_detalle_renglon2 figure:hover {color:rgb(246, 0, 160);}
+#productos_detalle_renglon2 figure img:hover {
+  -webkit-transform:scale(1.1);
+  transform:scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  #productos_detalle_renglon1, #productos_detalle_renglon2 {
+    display:grid;
+    grid-template-columns: 100%;
+  }
+  .fotos_productos figure{padding:20px;}
+  .fotos_productos figure img{width: 100%;}
+}
+.
 /* -------------------------------------- */
 /* seccion SERVICIOS                      */
 /* -------------------------------------- */
 #servicios{
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 #servicios p{
   line-height: 1.8;
   text-align: justify;
-  margin-top: 20px;
   padding: 10px;
+  margin: 20px 20px 0px 20px;
 }
 
-#servicios_detalle {display: flex; justify-content: center; align-items: center;}
+#servicios_detalle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 #servicios_detalle figure{display: inline-block; margin:5px;}
 #servicios_detalle figure img{vertical-align: top;}
 #servicios_detalle figure figcaption{text-align: center;padding-top: 10px; font-size:14px; font-weight: bold;}
 
+@media screen and (max-width: 950px) {
+  #servicios_detalle {
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  #servicios_detalle figure{padding:20px;}
+  #servicios_detalle figure img{width: 100%;}
+}
+
+
 
 /* ------------------------------------------------------------- */
 /* seccion CONTACTO                                              */
-/* https://www.w3schools.com/howto/howto_css_contact_section.asp */
+/*                                                               */
 /* ------------------------------------------------------------- */
 #contacto{
   margin-top: 20px;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
-* {
-  box-sizing: border-box;
+form{
+  display: block;
+  padding: 10px;
+  text-align:center;
+  margin:0 auto;
 }
+
+form, div{text-align: left;}
 
 /* Style inputs */
 input[type=text], select, textarea {
@@ -305,39 +437,52 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Style the container/contact section */
+textarea{height:170px;resize: none;}
+
+/* Style sector contacto */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
 }
 
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
+.row{
+  margin:0px auto;
+  text-align:center;
+  padding-top: 10px;
+  width: 80%;
+}
+
+.column_mapa, .column_formulario{
   margin-top: 6px;
   padding: 20px;
 }
-.column img{height: 500px;}
-.column textarea {height:170px;}
 
-.row{
-  margin-top: 10px;
+.column_mapa{
+  float: left;
+  width: 50%;
 }
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.column_mapa iframe{width: 100%;}
+
+.column_formulario{
+  float: left;
+  width: 50%;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
+label {
+  display: inline-block;
+  width: 80px;
+}
+
+@media screen and (max-width: 750px) {
+  .row{
     width: 100%;
-    margin-top: 0;
   }
+  .column_mapa, .column_formulario{
+    float: none;
+  width: 100%;
+  }
+  .column_formulario{margin-top: 5px;}
 }
 
 
@@ -346,11 +491,13 @@ input[type=submit]:hover {
 /* -------------------------------------- */
 footer{
   background-color: #c6bdb5;
-  padding: 10px;
+  padding: 2px;
   clear: both;
   text-align: center;
   margin: 0 auto;
 }
+
+/* instagram*/
 #redes_sociales {
   width: 100%;
   margin: 0 auto;
@@ -359,7 +506,6 @@ footer{
 #redes_sociales li {
   list-style-type: none;
   display: inline-block;
-  font-size: 10px;
 }
 #redes_sociales li a {
   text-decoration: none;
@@ -368,13 +514,23 @@ footer{
   padding: 10px;
   color: #5a5a5a;
 }
-#redes_sociales li a img{width: 25px;}
+
+#redes_sociales li a i{
+  color:rgb(151, 2, 2);
+  font-size: 40px;
+}
 
 #redes_sociales li a:hover {
   color: black;
   border-radius: 10px;
 }
 
+#redes_sociales li a i:hover{
+  color:rgb(104, 1, 1);
+  font-size: 40px;
+}
+
+/* datos de los generadores del espacio */
 #pie_sitio {
   width: 100%;
   margin: 0 auto;
@@ -396,5 +552,7 @@ footer{
   list-style-type: none;
   display: inline-block;
   font-size: 10px;
+  font-weight: bold;
   color: #5a5a5a;
+  margin-bottom: 10px;
 }
