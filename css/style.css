@@ -8,7 +8,7 @@
 }
 
 :root {
-	--black: #000000;
+	--black: #000;
 }
 
 body{
@@ -106,7 +106,7 @@ nav{
 }
 
 .menu li a:hover {
-  color: black;
+  color: #000;
   background-color: #fab2da;
   border-radius: 10px;
 }
@@ -521,7 +521,7 @@ footer{
 }
 
 #redes_sociales li a:hover {
-  color: black;
+  color: #000;
   border-radius: 10px;
 }
 
