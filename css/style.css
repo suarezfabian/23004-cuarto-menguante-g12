@@ -248,6 +248,13 @@ section h2{
 /* En pantallas más pequeñas, reduzca el tamaño del texto */
 @media only screen and (max-width: 650px) {
 	.text {font-size: 11px}
+	.slideshow-container_h2{
+		top: 35%;
+		left: 50%;
+	}
+	.slideshow-container_h2 h2{
+		font-size: 35px;
+	}
 }
 
 
