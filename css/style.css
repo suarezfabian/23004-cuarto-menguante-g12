@@ -46,7 +46,7 @@ nav{
 }
 
 .nav_toggle svg {
-	width: 100px;
+	width: 35px;
 	fill: var(--black);
 }
 
@@ -65,6 +65,7 @@ nav{
 
 .menu {
 	/*background-color: #ef0084;*/
+	background-color: #ddd2ca;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
