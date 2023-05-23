@@ -263,14 +263,18 @@ section h2{
 }
 
 /* En pantallas más pequeñas, reduzca el tamaño del texto */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
 	.text {font-size: 11px}
+	.slideshow-container {
+		max-width: 100%;
+	}
 	.slideshow-container_h2{
-		top: 35%;
+		width: 95%;
+		top: 45%;
 		left: 50%;
 	}
 	.slideshow-container_h2 h2{
-		font-size: 35px;
+		font-size: 30px;
 	}
 }
 
@@ -324,6 +328,13 @@ section h2{
 	}
 }
 
+@media only screen and (max-width: 1100px) {
+	.nosotros_texto{
+		margin:5px;
+		width: 100%;
+	}
+}
+
 
 /* -------------------------------------- */
 /* seccion PRODUCTOS                      */
@@ -366,12 +377,14 @@ section h2{
 #productos_detalle_renglon1 figure img:hover {
 	-webkit-transform:scale(1.1);
 	transform:scale(1.1);
+	transition: all 0.8s ease;
 }
 
 #productos_detalle_renglon2 figure:hover {color:rgb(246, 0, 160);}
 #productos_detalle_renglon2 figure img:hover {
 	-webkit-transform:scale(1.1);
 	transform:scale(1.1);
+	transition: all 0.8s ease;
 }
 
 @media screen and (max-width: 600px) {
@@ -381,6 +394,13 @@ section h2{
 	}
 	.fotos_productos figure{padding:20px;}
 	.fotos_productos figure img{width: 100%;}
+
+	#productos_detalle_renglon1, #productos_detalle_renglon2, figure figcaption{
+		text-align: center;
+		padding-top: 20px;
+		font-size:14px;
+		font-weight: bold;
+	}
 }
 
 /* -------------------------------------- */
