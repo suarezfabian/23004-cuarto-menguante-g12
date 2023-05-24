@@ -370,17 +370,19 @@ section h2{
 	text-align: center;
 	padding-top: 10px;
 	font-size:14px;
-	font-weight: bold;
+	font-weight: 600;
+	font-family: "Montserrat",Sans-serif;
 }
 
-#productos_detalle_renglon1 figure:hover {color:rgb(246, 0, 160);}
+#productos_detalle_renglon1 figure:hover {font-weight: 600; color:rgb(246, 0, 160);}
+
 #productos_detalle_renglon1 figure img:hover {
 	-webkit-transform:scale(1.1);
 	transform:scale(1.1);
 	transition: all 0.8s ease;
 }
 
-#productos_detalle_renglon2 figure:hover {color:rgb(246, 0, 160);}
+#productos_detalle_renglon2 figure:hover {font-weight: 600; color:rgb(246, 0, 160);}
 #productos_detalle_renglon2 figure img:hover {
 	-webkit-transform:scale(1.1);
 	transform:scale(1.1);
@@ -425,7 +427,15 @@ section h2{
 }
 #servicios_detalle figure{display: inline-block; margin:5px;}
 #servicios_detalle figure img{vertical-align: top;}
-#servicios_detalle figure figcaption{text-align: center;padding-top: 10px; font-size:14px; font-weight: bold;}
+#servicios_detalle figure figcaption{
+	text-align: center;
+	padding-top: 10px;
+	font-size:14px;
+	font-weight: 600;
+	font-family: "Montserrat",Sans-serif;
+}
+
+#servicios_detalle figure:hover {font-weight: 600; color:rgb(246, 0, 160);}
 
 @media screen and (max-width: 950px) {
 	#servicios_detalle {
